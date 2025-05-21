@@ -321,14 +321,14 @@ consistency, although it does make writing signed arithmetic operations more tex
 <p><a href="https://github.com/amaranth-lang/amaranth">Amaranth (previously nMigen)</a> </a> is another python hardware project providing an open-source toolchain
 that has a lot of wonderful stuff for working with FPGAs in particular.  It has support for evaluation board definitions, a System-on-Chip toolkit, and more.
 I think it has a similar philosophy of trying to be easy to learn and use and simplify the design of complex hardware with reusable components.  Amaranth
-(at the time of writing) has much better support on the back end for a variety of real devices and low level stuff like managing clock domains, but pyrtl
+(at the time of writing) has much better support on the back end for a variety of real devices and low level stuff like managing clock domains, but PyRTL
 I think it provides some value in getting going right in the command line and how it handles memories etc.  I would be eager to see the power of these tools
 combined in some way!
 
 <p><a href="https://chisel.eecs.berkeley.edu/">Chisel</a> is a project with similar goals to PyRTL but is based instead in Scala.  Scala
 provides some very helpful embedded language features and a rich type system. Chisel is (like PyRTL) a elaborate-through-execution hardware design language.  With support
 for signed types, named hierarchies of wires useful for hardware protocols, and a neat control structure call "when" that inspired our
-conditional contexts, Chisel is a powerful tool used in some great research projects including OpenRISC.  Unlike Chisel, PyRTL has
+conditional contexts, Chisel is a powerful tool used in some great research projects including RISC-V.  Unlike Chisel, PyRTL has
 concentrated on a simple to use and complete tool chain which is useful for instructional projects, and provides a clearly defined and relatively easy-to-manipulate
 intermediate structure in the class Block (often times call pyrtl.core) which allows rapid prototyping of hardware analysis
 routines which can then be codesigned with the architecture.</p>
@@ -359,12 +359,12 @@ certain restrictions -- sort of like Verilog) automatically converted into imple
 providing a limited and composable set of data structures to be used to specify an RTL implementation, thus avoiding the distinction between
 synthesizable and non-synthesizable code (the execution is the elaboration step).</p>
 
-<p><a href="http://www.clash-lang.org/">CλaSH</a> is a hardware description embedded DSL in Haskell. Like PyRTL it provides an
+<p><a href="http://www.clash-lang.org/">ClaSH</a> is a hardware description embedded DSL in Haskell. Like PyRTL it provides an
 approach suitable for both combinational and synchronous sequential circuits and allows the transform
 of these high-level descriptions to low-level synthesizable Verilog HDL.  Unlike PyRTL, designs are statically
 typed (like VHDL), yet with a very high degree of type inference, enabling both safe and fast prototying using concise
 descriptions.  If you like functional programming and hardware also check out
-<a href="http://blog.raintown.org/p/lava.html">Lava</a>.</p>
+<a href="https://raintown.org/lava/">Lava</a>.</p>
 
       <footer class="site-footer">
         <span class="site-footer-owner"><a href="https://github.com/UCSBarchlab/PyRTL">PyRTL</a> is maintained by <a href="https://github.com/UCSBarchlab">UCSBarchlab</a>.</span>
